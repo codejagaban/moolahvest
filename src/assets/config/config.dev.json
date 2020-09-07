@@ -1,0 +1,34 @@
+
+{
+  "env": {
+  "name": "DEV"
+   },
+  "appInsights": {
+  "instrumentationKey": "<dev-guid-here>"
+   },
+  "logging": {
+  "console": true,
+  "appInsights": false
+  },
+  "aad": {
+  "requireAuth": true,
+  "tenant": "<dev-guid-here>",
+  "clientId": "<dev-guid-here>"
+  },
+  "apiServer": {
+  "BaseUrl":"https://localhost:44385",
+  "AuthUrl":"https://localhost:44343",
+  "SavingsAndLoansUrl":"https://localhost:44303/lending/api/v1",
+  "SavingsUrl":"http://localhost/MoolahVest.ApiGw/savings/api/v1",
+  "LendingUrl":"http://localhost/MoolahVest.ApiGw/lending/api/v1",
+  "PaymentsUrl":"http://localhost/MoolahVest.ApiGw/payments",
+  "Url": "api/users",
+  "redirectUrl":"http://localhost:4200/accounts/login",
+  "silentRenewUrl":"http://localhost:4200",
+  "clientId":"MoolahVest_WebClient_c3742486-68d1-4766-b9f2-bfed128dfaf0",
+  "clientSecret":"MDdmY2U1MWUtYmU1YS00ZDc2LTljZTktYjQzNTIxNjI2ZTY0",
+   "ApiGw":"http://localhost/MoolahVest.ApiGw",
+   "InvestmentUrl":"http://localhost/MoolahVest.ApiGw/Investments",
+  "scope":"openid profile email Lending Payments Savings PaymentsApiGw Investment"
+  }
+}
