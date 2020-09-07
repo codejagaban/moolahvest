@@ -30,6 +30,9 @@ export interface IAppConfig {
       SavingsUrl:string;
       ProfileUrl : string;
       ApiGw:string;
+      OnboardingUrl:string;
+      mobileClientId:string;
+      mobileClientSecret:string;
       InvestmentUrl:string;
   };
 }
