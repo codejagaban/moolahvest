@@ -1,0 +1,7 @@
+{
+  "name": "MoolahVest.DigitalClient",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
