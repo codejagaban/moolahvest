@@ -15,7 +15,7 @@ export  class ApiService<T> {
     this.baseUrl = Config.settings.apiServer.BaseUrl;
     this.apiurl = this.url;
   }
-  public create(item: T, url: string): Observable<ApiResponse<T>> {
+  public post(item: T, url: string): Observable<ApiResponse<T>> {
     return this.httpClient .post<ApiResponse<T>>(`${url}`, item);
   }
 

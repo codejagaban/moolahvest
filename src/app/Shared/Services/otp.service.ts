@@ -15,9 +15,9 @@ export class OtpService extends ApiService<any> {
 
 
     VerifyOtp(model:any, route:string){
-      return this.create(model,route);
+      return this.post(model,route);
     }
     ResendOtp(model:any, route: string){
-     return  this.create(model,route);
+     return  this.post(model,route);
     }
 }

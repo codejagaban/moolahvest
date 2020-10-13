@@ -28,7 +28,7 @@ export class CardPaymentServices extends ApiService<any> {
   }
 
   addCard(model:any){
-    return this.create(model,`${this.paymentUrl}/addcard`);
+    return this.post(model,`${this.paymentUrl}/addcard`);
   }
 
   GetUserBankAccounts() {
@@ -43,6 +43,6 @@ export class CardPaymentServices extends ApiService<any> {
   }
 
   addBankAccount(model: any){
-    return this.create(model, `${this.paymentUrl}/addbankaccount`)
+    return this.post(model, `${this.paymentUrl}/addbankaccount`)
   }
 }

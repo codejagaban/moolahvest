@@ -16,19 +16,19 @@ public user: any= new BehaviorSubject(null);
     super(httpClient);
   }
   withoutBvn(user: any ) {
-    return this.create(user, `${this.baseUrl}/withoutBVN`).pipe(
+    return this.post(user, `${this.baseUrl}/withoutBVN`).pipe(
       map( response => {
        this.user = response.payload;
       })
     );
   }
 validateOTP(model: any ){
-    return this.create(model, `${Config.settings.apiServer.SavingsUrl}/validateOTP`);
+    return this.post(model, `${this.baseUrl}/validateOTP`);
 }
 resentOTP(model: any){
-    return this.create(model, `${Config.settings.apiServer.SavingsUrl}/ResendOTP`);
+    return this.post(model, `${this.baseUrl}/ResendOTP`);
 }
 setPassword(model: any){
-    return this.create(model, `${Config.settings.apiServer.SavingsUrl}/SetPassword`);
+    return this.post(model, `${Config.settings.apiServer.OnboardingUrl}/SetPassword`);
 }
 }
