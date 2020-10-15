@@ -24,6 +24,8 @@
   "PaymentsUrl":"http://localhost/MoolahVest.ApiGw/payments",
   "OnboardigUrl":"http://localhost/MoolahVest.ApiGw/onboarding/api/v1",
   "BillsUrl":"http://localhost/MoolahVest.ApiGw/bills/api/v1",
+  "ProfileUrl":"http://localhost/MoolahVest.Profile/api/v1/Profile",
+  "PINUrl":"http://localhost/MoolahVest.Profile/api/v1/PINServices",
   "Url": "api/users",
   "redirectUrl":"http://localhost:4200/accounts/login",
   "silentRenewUrl":"http://localhost:4200",
@@ -31,8 +33,8 @@
   "clientSecret":"MDdmY2U1MWUtYmU1YS00ZDc2LTljZTktYjQzNTIxNjI2ZTY0",
   "mobileClientId":"",
   "mobileClientSecret":"",
-   "ApiGw":"http://localhost/MoolahVest.ApiGw",
-   "InvestmentUrl":"http://localhost/MoolahVest.ApiGw/Investments",
+  "ApiGw":"http://localhost/MoolahVest.ApiGw",
+  "InvestmentUrl":"http://localhost/MoolahVest.ApiGw/Investments",
   "scope":"openid profile email Lending Payments Savings PaymentsApiGw Investment"
   }
 }

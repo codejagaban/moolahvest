@@ -4,20 +4,24 @@ import { Injectable } from '@angular/core';
 import { Config } from 'src/assets/config/config';
 import { map } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
+import { OnboardingUser } from './models/user.model';
 
 @Injectable({
   providedIn : 'root'
 })
 export class OnboardingService extends ApiService{
 baseUrl = `${Config.settings.apiServer.OnboardingUrl}`;
-public user: any= new BehaviorSubject(null);
+private users = new BehaviorSubject<OnboardingUser>(null);
   constructor(httpClient: HttpClient) {
     super(httpClient);
   }
-  withoutBvn(user: any ) {
+  get user(){
+    return this.users.asObservable();
+  }
+  withoutBvn(user: OnboardingUser ) {
     return this.post<any>(user, `${this.baseUrl}/withoutBVN`).pipe(
-      map( response => {
-       this.user = response.payload;
+      map( () => {
+      this.users.next(user);
       })
     );
   }
@@ -29,5 +33,8 @@ resentOTP(model: any){
 }
 setPassword(model: any){
     return this.post<any>(model, `${Config.settings.apiServer.OnboardingUrl}/SetPassword`);
+}
+setPIN(model: any){
+  return this.post<any>(model,`${Config.settings.apiServer.ProfileUrl}/Create`);
 }
 }

@@ -31,6 +31,7 @@ export interface IAppConfig {
       ProfileUrl : string;
       ApiGw:string;
       OnboardingUrl:string;
+      PINUrl: string;
       BillsUrl:string;
       mobileClientId:string;
       mobileClientSecret:string;
