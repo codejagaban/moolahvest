@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { ApiService } from 'src/app/shared/services/Api.services';
 import { Injectable } from '@angular/core';
 import { Config } from 'src/assets/config/config';
 import { map } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
 import { OnboardingUser } from './models/user.model';
+import { ApiService } from '../shared/services/Api.services';
 
 @Injectable({
   providedIn : 'root'
