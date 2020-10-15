@@ -1,2 +1,14 @@
 
-<h1>Wallet Page, We are starting Onboarding</h1>
+
+<ion-row>
+    <ion-col>
+        <app-stepper [linerModeSelected]="false" #appStepper>
+            <cdk-step [label]="'Bio'"></cdk-step>
+            <cdk-step [label]="'Verify Your Phone'"></cdk-step>
+            <cdk-step [label]="'Create Password'"></cdk-step>
+            <cdk-step [label]="'Create PIN'"></cdk-step>
+        </app-stepper>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+</ion-row>

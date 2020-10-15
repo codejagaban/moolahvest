@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../Shared/shared.module';
 import { WalletPage } from './pages/wallet-page';
 import { BvnPage } from './pages/bvn-page';
+import { OtpPage } from './pages/otp.page';
+import { SetPasswordPage } from './pages/setPassword.page';
+import { SetPINPage } from './pages/setPIN.page';
 
 const routes: Routes = [
   {
@@ -27,6 +30,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes), SharedModule],
-  declarations: [WalletPage, BvnPage]
+  declarations: [WalletPage, BvnPage, OtpPage,SetPINPage,SetPasswordPage]
 })
 export class OnboardingModule {}
