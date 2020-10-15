@@ -8,27 +8,26 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn : 'root'
 })
-export class OnboardingService extends ApiService<any> {
+export class OnboardingService extends ApiService{
 baseUrl = `${Config.settings.apiServer.OnboardingUrl}`;
-
 public user: any= new BehaviorSubject(null);
   constructor(httpClient: HttpClient) {
     super(httpClient);
   }
   withoutBvn(user: any ) {
-    return this.post(user, `${this.baseUrl}/withoutBVN`).pipe(
+    return this.post<any>(user, `${this.baseUrl}/withoutBVN`).pipe(
       map( response => {
        this.user = response.payload;
       })
     );
   }
 validateOTP(model: any ){
-    return this.post(model, `${this.baseUrl}/validateOTP`);
+    return this.post<any>(model, `${this.baseUrl}/validateOTP`);
 }
 resentOTP(model: any){
-    return this.post(model, `${this.baseUrl}/ResendOTP`);
+    return this.post<any>(model, `${this.baseUrl}/ResendOTP`);
 }
 setPassword(model: any){
-    return this.post(model, `${Config.settings.apiServer.OnboardingUrl}/SetPassword`);
+    return this.post<any>(model, `${Config.settings.apiServer.OnboardingUrl}/SetPassword`);
 }
 }

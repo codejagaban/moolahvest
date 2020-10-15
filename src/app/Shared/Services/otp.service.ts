@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn:'root'
 })
-export class OtpService extends ApiService<any> {
+export class OtpService extends ApiService {
 
 
   constructor(public httpClient: HttpClient) {
@@ -15,9 +15,9 @@ export class OtpService extends ApiService<any> {
 
 
     VerifyOtp(model:any, route:string){
-      return this.post(model,route);
+      return this.post<any>(model,route);
     }
     ResendOtp(model:any, route: string){
-     return  this.post(model,route);
+     return  this.post<any>(model,route);
     }
 }

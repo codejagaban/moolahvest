@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn:'root'
 })
-export class CardPaymentServices extends ApiService<any> {
+export class CardPaymentServices extends ApiService {
 
   private paymentUrl = `${Config.settings.apiServer.PaymentsUrl}/api/v1/cards`;
   constructor(public httpClient: HttpClient) {
@@ -15,20 +15,20 @@ export class CardPaymentServices extends ApiService<any> {
   }
 
   GetPaymentOption(){
-    return this.GetAll(`${this.paymentUrl}/provider`);
+    return this.GetAll<any>(`${this.paymentUrl}/provider`);
   }
   GetUserCards(){
-    return this.GetAll(`${this.paymentUrl}/getusercards`);
+    return this.GetAll<any>(`${this.paymentUrl}/getusercards`);
   }
   GetUserCardsAndBankAccounts(){
-    return this.GetAll(`${this.paymentUrl}/getusercardsandBankAccounts`);
+    return this.GetAll<any>(`${this.paymentUrl}/getusercardsandBankAccounts`);
   }
   GenerateReference(){
-    return this.GetAll(`${this.paymentUrl}/generateRef`);
+    return this.GetAll<any>(`${this.paymentUrl}/generateRef`);
   }
 
   addCard(model:any){
-    return this.post(model,`${this.paymentUrl}/addcard`);
+    return this.post<any>(model,`${this.paymentUrl}/addcard`);
   }
 
   GetUserBankAccounts() {

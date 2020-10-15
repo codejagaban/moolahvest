@@ -7,7 +7,7 @@ import { Observable, throwError, BehaviorSubject } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { FormGroup, FormControl } from '@angular/forms';
 
-export  class ApiService<T> {
+export  class ApiService {
   model:any = {};
   baseUrl: string;
   apiurl: string;
@@ -15,29 +15,29 @@ export  class ApiService<T> {
     this.baseUrl = Config.settings.apiServer.BaseUrl;
     this.apiurl = this.url;
   }
-  public post(item: T, url: string): Observable<ApiResponse<T>> {
+  public post<T>(item: T, url: string): Observable<ApiResponse<T>> {
     return this.httpClient .post<ApiResponse<T>>(`${url}`, item);
   }
 
-  public createBaseUrl(item: T, url: string): Observable<ApiResponse<T>> {
+  public createBaseUrl<T>(item: T, url: string): Observable<ApiResponse<T>> {
 
     return this.httpClient .post<ApiResponse<T>>(`${url}`, item);
   }
-  update(resource: any, url: any ): Observable< ApiResponse<T>> {
+  update<T>(resource: any, url: any ): Observable< ApiResponse<T>> {
 
     return this.httpClient.put<ApiResponse<T>>(`${url}`, resource);
     }
-     Get(id: any, url: any): Observable<ApiResponse<T>> {
+     Get<T>(id: any, url: any): Observable<ApiResponse<T>> {
       return this.httpClient.get<ApiResponse<T>>(`${url}` + '/' + id);
       }
-      GetWithQueryString(input: any, url) {
+      GetWithQueryString<T>(input: any, url) {
         return this.httpClient.get<ApiResponse<T>>(`${url}` + '?' + this.toQueryString(input));
       }
-     GetDataWithFilter(query: any, url: any): Observable<ApiResponse<T>> {
+     GetDataWithFilter<T>(query: any, url: any): Observable<ApiResponse<T>> {
        return this.httpClient.get<ApiResponse<T>>(`${url}` + '?' + this.toQueryString(query));
     }
 
-    GetAll(url: any): Observable<ApiResponse<T>> {
+    GetAll<T>(url: any): Observable<ApiResponse<T>> {
       return this.httpClient.get<ApiResponse<T>>(`${url}`);
       }
   toQueryString(queryString) {

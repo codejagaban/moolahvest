@@ -23,6 +23,7 @@
   "LendingUrl":"http://localhost/MoolahVest.ApiGw/lending/api/v1",
   "PaymentsUrl":"http://localhost/MoolahVest.ApiGw/payments",
   "OnboardigUrl":"http://localhost/MoolahVest.ApiGw/onboarding/api/v1",
+  "BillsUrl":"http://localhost/MoolahVest.ApiGw/bills/api/v1",
   "Url": "api/users",
   "redirectUrl":"http://localhost:4200/accounts/login",
   "silentRenewUrl":"http://localhost:4200",
