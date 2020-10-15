@@ -1,5 +1,5 @@
 import { Config } from './../../../assets/config/config';
-import { ApiService } from 'src/app/shared/services/Api.services';
+import { ApiService } from 'src/app/Shared/Services/Api.services';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 

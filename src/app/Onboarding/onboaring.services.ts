@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { ApiService } from 'src/app/shared/services/Api.services';
+import { ApiService } from 'src/app/Shared/Services/Api.services';
 import { Injectable } from '@angular/core';
 import { Config } from 'src/assets/config/config';
 import { map } from 'rxjs/operators';
