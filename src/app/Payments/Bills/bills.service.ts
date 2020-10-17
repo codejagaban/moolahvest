@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, of } from 'rxjs';
 import { map, switchMap, take, tap } from 'rxjs/operators';
-import { ApiService } from 'src/app/shared/services/Api.services';
+import { ApiService } from 'src/app/Shared/Services/Api.services';
 import { Config } from 'src/assets/config/config';
 import { BillerItems, Billers, BillsModel, BillTypes, Categories, CategoryFilter } from './models/bills.model';
 

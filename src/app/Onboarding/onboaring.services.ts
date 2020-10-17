@@ -4,7 +4,7 @@ import { Config } from 'src/assets/config/config';
 import { map } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
 import { OnboardingUser } from './models/user.model';
-import { ApiService } from '../shared/services/Api.services';
+import { ApiService } from '../Shared/Services/Api.services';
 
 @Injectable({
   providedIn : 'root'
