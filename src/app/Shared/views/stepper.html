@@ -1,0 +1,13 @@
+
+<ion-segment>
+    <ion-segment-button
+        *ngFor="let step of steps; let i = index"
+        color="primary =selectedIndex === i"
+        (click)="onClick(i)">
+      <ion-label>{{step.label}}</ion-label>
+    </ion-segment-button>
+</ion-segment>
+
+<div>
+    <ng-container [ngTemplateOutlet] = "selected.content"></ng-container>
+</div>

@@ -5,6 +5,7 @@ import { OnboardingService } from '../onboaring.services';
 
 
 @Component({
+    selector: 'app-onboard-otp',
     templateUrl: '../views/otp.html'
 })
 export class OtpPage implements OnInit, OnDestroy {

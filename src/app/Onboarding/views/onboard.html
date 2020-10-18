@@ -1,0 +1,21 @@
+
+<ion-row>
+    <ion-col>
+        <app-stepper [linerModeSelected]="false" #appStepper>
+            <cdk-step [label]="'Bio Data'">
+                <app-onboard-wallet></app-onboard-wallet>
+            </cdk-step>
+            <cdk-step [label]="'Verify Your Phone'">
+                <app-onboard-otp></app-onboard-otp>
+            </cdk-step>
+            <cdk-step [label]="'Create Password'">
+                <app-onboard-setpassword></app-onboard-setpassword>
+            </cdk-step>
+            <cdk-step [label]="'Create PIN'">
+                <app-onboard-setpin></app-onboard-setpin>
+            </cdk-step>
+        </app-stepper>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+</ion-row>

@@ -5,6 +5,7 @@ import { OnboardingService } from '../onboaring.services';
 
 
 @Component({
+    selector: 'app-onboard-setpassword',
     templateUrl : '../views/setPassword.html'
 })
 export class SetPasswordPage implements OnInit, OnDestroy {

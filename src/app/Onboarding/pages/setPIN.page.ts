@@ -7,6 +7,7 @@ import { OnboardingService } from '../onboaring.services';
 
 
 @Component({
+    selector: 'app-onboard-setpin',
     templateUrl: '../views/setPIN.html'
 })
 export class SetPINPage{
