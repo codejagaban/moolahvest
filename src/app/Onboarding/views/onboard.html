@@ -1,8 +1,7 @@
 
-<ion-row>
-    <ion-col>
         <app-stepper [linerModeSelected]="false" #appStepper>
             <cdk-step [label]="'Bio Data'">
+                <h3>Me</h3>
                 <app-onboard-wallet></app-onboard-wallet>
             </cdk-step>
             <cdk-step [label]="'Verify Your Phone'">
@@ -15,7 +14,3 @@
                 <app-onboard-setpin></app-onboard-setpin>
             </cdk-step>
         </app-stepper>
-    </ion-col>
-    <ion-col>
-    </ion-col>
-</ion-row>

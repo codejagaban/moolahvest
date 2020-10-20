@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { OnboardPage } from './onboarding.page';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -13,24 +14,24 @@ const routes: Routes = [
     path: '',
     component: OnboardPage,
     pathMatch: 'full'
-  },
-  {
-    path: '',
-    children: [
-      {path: 'wallet',
-      component: WalletPage,
-      pathMatch: 'full'
-    },
-  {
-    path: 'bvn',
-    component: BvnPage,
-    pathMatch: 'full'
-  }]
   }
+  // {
+  //   path: '',
+  //   children: [
+  //     {path: 'wallet',
+  //     component: WalletPage,
+  //     pathMatch: 'full'
+  //   },
+  // {
+  //   path: 'bvn',
+  //   component: BvnPage,
+  //   pathMatch: 'full'
+  // }]
+  // }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes), SharedModule],
-  declarations: [OnboardPage, WalletPage, BvnPage, OtpPage,SetPINPage,SetPasswordPage]
+  imports: [RouterModule.forChild(routes), CommonModule, SharedModule],
+  declarations: [OnboardPage]
 })
 export class OnboardingModule {}
