@@ -1,10 +1,11 @@
 
         <app-stepper [linerModeSelected]="false" #appStepper>
             <cdk-step [label]="'Bio Data'">
-                <h3>Me</h3>
+				Me
                 <app-onboard-wallet></app-onboard-wallet>
             </cdk-step>
             <cdk-step [label]="'Verify Your Phone'">
+				You
                 <app-onboard-otp></app-onboard-otp>
             </cdk-step>
             <cdk-step [label]="'Create Password'">
