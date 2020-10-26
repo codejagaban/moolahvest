@@ -3,7 +3,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
-    selector: 'app-stepper',
+	selector: 'app-stepper',
+	styleUrls: ['../styles/stepper.scss'],
     templateUrl: '../views/stepper.html',
     providers:[{provide: CdkStepper, useExisting: StepperPage}]
 })

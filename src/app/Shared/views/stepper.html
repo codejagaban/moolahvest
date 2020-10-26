@@ -1,13 +1,32 @@
 
-<ion-segment>
-    <ion-segment-button
-        *ngFor="let step of steps; let i = index"
-        color="primary =selectedIndex === i"
-        (click)="onClick(i)">
-      <ion-label>{{step.label}}</ion-label>
-    </ion-segment-button>
-</ion-segment>
+<ion-grid class="ion-no-padding">
+	<ion-row class="row">
+		<ion-col size="3" class="col">
+			<div class="step-segment">
+				<ion-chip
+					*ngFor="let step of steps; let i = index"
+					[class.active]="selectedIndex === i"
+					(click)="onClick(i)">
+					<ion-label [step]="step">
+						<span class="step-count">{{i+1}}</span>
+						{{step.label}}
+					</ion-label>
+				</ion-chip>
+				<div class="step-footer">
+					<div class="step-footer-item">
+						<a href="/faq">FAQ</a>
+						<a href="/faq">Terms and Conditions</a>
+						<a href="/faq">Privacy Policy</a>
+					</div>
+				</div>
+			</div>
+		</ion-col>
+		<ion-col size="9" class="col">
+			<ion-content class="step-content">
+				<ng-container [ngTemplateOutlet] = "selected.content"></ng-container>
+			</ion-content>
 
-<div>
-    <ng-container [ngTemplateOutlet] = "selected.content"></ng-container>
-</div>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+
