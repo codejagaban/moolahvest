@@ -1,10 +1,9 @@
 
         <app-stepper [linerModeSelected]="false" #appStepper>
-            <cdk-step [label]="'Bio Data'" [icon]= "'analytics-outline'">
-				Me
-                <app-onboard-wallet></app-onboard-wallet>
+            <cdk-step [label]="'Bio Data'" >
+                <app-onboard-wallet [onboardForm]="onboardForm"></app-onboard-wallet>
             </cdk-step>
-            <cdk-step [label]="'Verify Your Phone'">
+            <!-- <cdk-step [label]="'Verify Your Phone'">
 				You
                 <app-onboard-otp></app-onboard-otp>
             </cdk-step>
@@ -13,5 +12,5 @@
             </cdk-step>
             <cdk-step [label]="'Create PIN'">
                 <app-onboard-setpin></app-onboard-setpin>
-            </cdk-step>
+            </cdk-step> -->
         </app-stepper>
