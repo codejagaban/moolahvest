@@ -32,6 +32,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes), CommonModule, SharedModule],
-  declarations: [OnboardPage,BvnPage, OtpPage,SetPasswordPage, WalletPage]
+  declarations: [OnboardPage, WalletPage]
 })
 export class OnboardingModule {}
