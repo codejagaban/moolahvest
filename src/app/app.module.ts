@@ -10,6 +10,7 @@ import { SharedModule } from './Shared/shared.module';
 import { Config } from 'src/assets/config/config';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './Shared/interceptors/token.interceptors';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function initializeApp(appConfig: Config) {
   return () => appConfig.load();
@@ -18,7 +19,14 @@ export function initializeApp(appConfig: Config) {
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, SharedModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    SharedModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [
     StatusBar,
     SplashScreen,
