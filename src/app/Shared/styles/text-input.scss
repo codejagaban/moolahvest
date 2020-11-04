@@ -1,0 +1,81 @@
+.text-input-wrapper {
+margin: 15px 0;
+width: 100%;
+}
+:host {
+	::ng-deep {
+
+	// input outline color
+	.mat-form-field-appearance-outline .mat-form-field-outline {
+	color: var(--ion-color-medium-tint) !important;
+	}
+	.ng-invalid .text-input-wrapper .mat-form-field-wrapper .mat-form-field-appearance-outline .mat-form-field-outline {
+		color: var(--ion-color-danger) !important;
+		}
+
+	// mat-input focused color
+	.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+	color: var(--ion-color-primary-shade) !important;
+	}
+
+	// mat-input error outline color
+	// .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+	// // // color: $custom-main-color !important;
+	// // color: var;
+	// opacity: 0.8 !important;
+	// }
+
+	// mat-input caret color
+	.mat-input-element {
+	// caret-color: $custom-main-color !important;
+	}
+
+	// mat-label normal state style
+	.mat-form-field-label {
+	padding-left: 10px;
+	}
+
+	// mat-label focused style
+	.mat-form-field.mat-focused .mat-form-field-label {
+	// color: $custom-main-color !important;
+	}
+
+	// mat-label error style
+	.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+		color: var(--ion-color-danger) !important;
+	}
+		.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start, .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end, .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap {
+			border-width: 1px  !important;
+		}
+		.mat-form-field-wrapper{
+			margin: 0 !important;
+			padding: 5px 0;
+			}
+	}
+}
+
+.label {
+height: 100%;
+font-family: var(--ion-font-primary);
+font-size: 16px;
+}
+
+.text-input {
+--padding-top: 0;
+--padding-bottom: 5px;
+--padding-start: 0;
+--padding-end: 0;
+font-family: var(--ion-font-primary);
+font-size: 16px;
+color:  var(--ion-color-dark-tint);
+}
+
+ion-icon {
+	font-size: 23px;
+	&.invalid {
+		color: var(--ion-color-danger);
+	}
+	&.valid {
+		color: var(--ion-color-success)
+	}
+}

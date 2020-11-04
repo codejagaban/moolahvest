@@ -3,12 +3,13 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
 
 
 @Component({
-    selector : 'text-input',
+	selector : 'app-text-input',
+	styleUrls: ['../styles/text-input.scss'],
     templateUrl : '../views/text-input.html'
 })
 export class TextInputPage implements OnInit, ControlValueAccessor {
 
-    @ViewChild('input',{static:true}) input: ElementRef;
+    @ViewChild('input',{static:true},) input: ElementRef;
     @Input() type = 'text';
     @Input() label: string;
     constructor(@Self() public controlDir: NgControl ){
@@ -21,9 +22,15 @@ export class TextInputPage implements OnInit, ControlValueAccessor {
         control.setValidators(validators);
         control.setAsyncValidators(asyncValidators);
         control.updateValueAndValidity();
+        console.log(this.input);
+        console.log(this.controlDir);
     }
-    onChange(event){}
-    onTouched(event){}
+    onChange(event){
+        console.log(event);
+	}
+    onTouched(event) {
+
+    }
 
     writeValue(obj: any): void {
        this.input.nativeElement.value = obj || '';

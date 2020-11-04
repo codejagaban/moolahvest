@@ -1,16 +1,45 @@
+<div class="text-input-wrapper">
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label class="label">{{label}}</mat-label>
+          <input matInput
+                  [type]="type"
+                  style="border-width:20px"
+                  (input)="onChange($event.target.value)"
+                  (blur)="onTouched()"
+                   id="{{label}}"
+                   class="text-input"
+                   required
+                   #input>
+                   <ion-icon matSuffix
+                               name="alert-circle-outline"
+                               class="invalid"
+                               *ngIf="(controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.touched)">
+                              </ion-icon>
+                   <ion-icon matSuffix
+                               name="checkmark-outline"
+                               class="valid"
+                               *ngIf="(controlDir && controlDir.control && controlDir.control.valid && controlDir.control.touched)"
+                               ></ion-icon>
+         </mat-form-field>
+  <div class="invalid-feedback" *ngIf="(controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.touched)">
+          <mat-error *ngIf="controlDir.control.errors?.required">{{label}} is required</mat-error>
+          <mat-error *ngIf="controlDir.control.errors?.pattern">Invalid Email Address</mat-error>
+    </div>
 
-<ion-item>
-    <ion-label position="floating">{{label}}</ion-label>
+</div>
+
+
+<!-- <ion-item  class="ion-no-padding text-input-wrapper">
+    <ion-label position="floating" class="label">{{label}}</ion-label>
     <ion-input [type]="type" [ngClass]= "(controlDir && controlDir.control && controlDir.control.touched)? !controlDir.control.valid ? 'is-invalid' : 'is-valid' : null"
-     (input)="onChange($event.target.value)"
+     (ionInput)="onChange($event.target.value)"
      (ionBlur)="onTouched()"
      id="{{label}}"
-     placeholder ="{{label}}"
+     required
+     class="text-input"
     #input>
     </ion-input>
-    <div class="invalid-feedback" *ngIf="">
-        <span *ngIf="controlDir.control.errors?.required">{{label}} is required</span>
-        <span *ngIf="controlDir.control.errors?.pattern">Invalid Email Address</span>
-    </div>
-  </ion-item>
-  
+  </ion-item> -->
+  <!-- <div class="invalid-feedback" *ngIf="(controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.touched)">
+
+</div> -->
