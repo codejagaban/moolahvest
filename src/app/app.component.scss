@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Harmattan&display=swap');
+@font-face {
+	font-family: "clean-ui ";
+	src: url(../assets/fonts/gordita.woff2) format('woff2');
+	font-weight: normal;
+}
+body {
+
+	background: var(--ion-color-medium);
+}
+
+// Global modification styles to use for different components
+
+:host {
+::ng-deep {
+
+// input outline color
+.mat-form-field-appearance-outline .mat-form-field-outline {
+color: var(--ion-color-medium-tint) !important;
+}
+
+// mat-input focused color
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+color: var(--ion-color-primary-shade) !important;
+}
+
+// mat-input error outline color
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+	color: var(--ion-color-danger) !important;
+
+opacity: 0.8 !important;
+}
+
+// mat-input caret color
+.mat-input-element {
+// caret-color: $custom-main-color !important;
+}
+
+// mat-input error caret color
+.mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+caret-color: var(--ion-color-danger) !important;
+}
+
+// mat-label normal state style
+.mat-form-field-label {
+padding-left: 10px;
+}
+
+// mat-label focused style
+.mat-form-field.mat-focused .mat-form-field-label {
+// color: $custom-main-color !important;
+}
+
+// mat-label error style
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+	color: var(--ion-color-danger) !important;
+}
+	.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start, .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end, .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap {
+		border-width: 1px  !important;
+	}
+	.mat-form-field-wrapper{
+		margin: 0 !important;
+		padding: 20px 0 15px 0;
+		}
+	.mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+		padding: 0;
+	}
+		mat-error {
+			color: var(--ion-color-danger);
+			font-size:13px ;
+			padding-left: 20px;
+			font-family: var(--ion-font-primary);
+			}
+}
+}
