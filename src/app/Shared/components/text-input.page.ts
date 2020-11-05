@@ -3,13 +3,13 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
 
 
 @Component({
-	selector : 'app-text-input',
-	styleUrls: ['../styles/text-input.scss'],
+    selector : 'app-text-input',
+    styleUrls: ['../styles/text-input.scss'],
     templateUrl : '../views/text-input.html'
 })
 export class TextInputPage implements OnInit, ControlValueAccessor {
 
-    @ViewChild('input',{static:true},) input: ElementRef;
+    @ViewChild('input', {static: true}, ) input: ElementRef;
     @Input() type = 'text';
     @Input() label: string;
     constructor(@Self() public controlDir: NgControl ){
@@ -27,7 +27,7 @@ export class TextInputPage implements OnInit, ControlValueAccessor {
     }
     onChange(event){
         console.log(event);
-	}
+    }
     onTouched(event) {
 
     }
@@ -44,5 +44,5 @@ export class TextInputPage implements OnInit, ControlValueAccessor {
     setDisabledState?(isDisabled: boolean): void {
         throw new Error('Method not implemented.');
     }
- 
+
 }

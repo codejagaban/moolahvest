@@ -32,12 +32,8 @@ width: 100%;
 
 	// mat-label normal state style
 	.mat-form-field-label {
-	padding-left: 10px;
-	}
-
-	// mat-label focused style
-	.mat-form-field.mat-focused .mat-form-field-label {
-	// color: $custom-main-color !important;
+		padding-left: 10px;
+		margin-top: -7px;
 	}
 
 	// mat-label error style
