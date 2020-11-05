@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Harmattan&display=swap');
 @font-face {
-	font-family: "clean-ui ";
-	src: url(../assets/fonts/gordita.woff2) format('woff2');
+	font-family: "clean-ui";
+	src: url(../assets/fonts/gordita.woff) format('woff');
 	font-weight: normal;
 }
 body {
-
 	background: var(--ion-color-medium);
+	color: var(--ion-color-medium);
 }
 
 // Global modification styles to use for different components

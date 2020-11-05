@@ -42,7 +42,6 @@ export function initializeApp(appConfig: Config) {
       multi: true
     },
   ],
- 
   bootstrap: [AppComponent]
 })
 export class AppModule {}
