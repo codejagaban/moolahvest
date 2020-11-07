@@ -1,9 +1,14 @@
 <div class="text-input-wrapper">
-    <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-form-field
+			appearance="outline"
+			style="width: 100%;"
+			[ngClass]= "(controlDir && controlDir.control &&
+				 controlDir.control.touched)? !controlDir.control.valid ? 'mat-form-field-invalid' :
+				  'mat-form-field-valid' : null"
+	>
       <mat-label class="label">{{label}}</mat-label>
           <input matInput
                   [type]="type"
-                  style="border-width:20px"
                   (input)="onChange($event.target.value)"
                   (blur)="onTouched()"
                    id="{{label}}"

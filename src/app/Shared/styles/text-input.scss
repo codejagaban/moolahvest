@@ -33,7 +33,7 @@ width: 100%;
 	// mat-label normal state style
 	.mat-form-field-label {
 		padding-left: 10px;
-		margin-top: -7px;
+		//margin-top: -7px;
 	}
 
 	// mat-label error style
@@ -57,13 +57,6 @@ font-size: 14px;
 }
 
 .text-input {
---padding-top: 0;
---padding-bottom: 5px;
---padding-start: 0;
---padding-end: 0;
-font-family: var(--ion-font-primary);
-font-size: 14px;
-color:  var(--ion-color-dark-tint);
 }
 
 ion-icon {

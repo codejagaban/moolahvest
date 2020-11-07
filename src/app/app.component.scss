@@ -31,9 +31,9 @@ color: var(--ion-color-primary-shade) !important;
 opacity: 0.8 !important;
 }
 
-// mat-input caret color
-.mat-input-element {
-// caret-color: $custom-main-color !important;
+	input.mat-input-element {
+	margin-top: -0.0625em;
+	font-family: var(--ion-font-primary);
 }
 
 // mat-input error caret color
@@ -43,7 +43,10 @@ caret-color: var(--ion-color-danger) !important;
 
 // mat-label normal state style
 .mat-form-field-label {
-padding-left: 10px;
+	padding-left: 10px;
+	font-family: var(--ion-font-primary);
+	font-size: 14px;
+
 }
 
 // mat-label focused style
@@ -73,3 +76,25 @@ padding-left: 10px;
 			}
 }
 }
+.action-section {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media(max-width: 800px) {
+	.action-section {
+		display: block;
+
+	}
+}
+
+
+.btn {
+	--padding-top: 22px;
+	--padding-start: 40px;
+	--padding-end: 40px;
+	--padding-bottom: 22px;
+	text-transform: capitalize;
+}
+

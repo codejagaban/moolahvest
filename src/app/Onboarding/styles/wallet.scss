@@ -8,16 +8,12 @@ p.title {
 	font-family: 'Harmattan', sans-serif;
     color: #3f3f3f;
 }
-.action-section {
-	margin-top: 50px;
-	display: flex;
-	justify-content: space-between;
-}
-
-@media(max-width: 800px) {
-.action-section {
-	display: block;
-}
+.step-box {
+	padding: 40px;
+	background: var(--ion-color-light);
+	box-shadow: var(--shadow-medium);
+	border-radius: 8px;
+	margin: 10% 5px 5px 5px;
 }
 
 ion-icon {
