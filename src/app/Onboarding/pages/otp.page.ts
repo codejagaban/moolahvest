@@ -1,7 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Genders, OnboardingUser } from '../models/user.model';
 import { OnboardingService } from '../onboaring.services';
+import { FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -9,8 +10,9 @@ import { OnboardingService } from '../onboaring.services';
     templateUrl: '../views/otp.html'
 })
 export class OtpPage implements OnInit, OnDestroy {
+    @Input() boardForm: FormGroup;
     userSub: Subscription;
-    gender =Genders;
+    gender = Genders;
     user: OnboardingUser = {
         DateOfBirth : new Date(),
         countryCode : '',
@@ -22,7 +24,7 @@ export class OtpPage implements OnInit, OnDestroy {
         gender : this.gender.Female
     };
  constructor(private onboardingService: OnboardingService){
-     this.userSub = onboardingService.user.subscribe(user=> {
+     this.userSub = onboardingService.user.subscribe(user => {
       this.user = user;
      });
  }
@@ -31,8 +33,11 @@ export class OtpPage implements OnInit, OnDestroy {
         throw new Error('Method not implemented.');
     }
     ngOnDestroy(): void {
-        if(this.userSub){
+        if (this.userSub){
          this.userSub.unsubscribe();
         }
+    }
+    onOtpChange(e) {
+        console.log(e);
     }
 }

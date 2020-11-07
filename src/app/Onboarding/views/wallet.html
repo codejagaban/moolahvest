@@ -1,5 +1,5 @@
-	<div class="step-box">
-		<div [formGroup]="onboardForm">
+	<div class="box">
+		<div [formGroup]="boardForm">
 			<p class="title">Personal Details</p>
 			<div class="wallet-input" formGroupName="walletForm">
 				<app-text-input [label]="'First name'" [type]="'text'" formControlName="firstName"></app-text-input>
@@ -22,32 +22,33 @@
 							matSuffix
 							name="alert-circle-outline"
 							class="invalid"
-							*ngIf="(onboardForm.controls.walletForm.controls.phone.errors?.required &&
-							onboardForm.controls.walletForm.controls.phone.touched)">
+							*ngIf="(boardForm.controls.walletForm.controls.phone.errors?.required &&
+							boardForm.controls.walletForm.controls.phone.touched)">
 					
 					</ion-icon>
 					<ion-icon
 							matSuffix
 							name="checkmark-outline"
-							*ngIf="(onboardForm.controls.walletForm.controls.phone.errors === null &&
-							onboardForm.controls.walletForm.controls.phone.touched)"
+							*ngIf="(boardForm.controls.walletForm.controls.phone.errors === null &&
+							boardForm.controls.walletForm.controls.phone.touched)"
 							class="valid">
 					</ion-icon>
-					<mat-error *ngIf="onboardForm.controls.walletForm.controls.phone?.errors?.required">
+					<mat-error *ngIf="boardForm.controls.walletForm.controls.phone?.errors?.required">
 						Phone number is invalid
 					</mat-error>
 				</mat-form-field>
 				<mat-form-field appearance="outline" style="width: 100%;">
 					<mat-label>Date of Birth</mat-label>
 					<input
-	matInput
-	[matDatepicker]="picker"
-	formControlName="dateOfBirth"
-	required>
+							matInput
+							[matDatepicker]="picker"
+							formControlName="dateOfBirth"
+							required>
 					<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
 					<mat-datepicker touchUi #picker></mat-datepicker>
-					<mat-error *ngIf="onboardForm.controls.walletForm.controls.dateOfBirth.errors?.required">
-	Date of birth is invalid</mat-error>
+					<mat-error *ngIf="boardForm.controls.walletForm.controls.dateOfBirth.errors?.required">
+						Date of birth is invalid
+					</mat-error>
 				</mat-form-field>
 			</div>
 		</div>

@@ -1,7 +1,20 @@
-<ion-card>
-	<ion-card-header>
-	  <ion-card-subtitle>OTP Page</ion-card-subtitle>
-	</ion-card-header>
-  
-
-  </ion-card>
+<div class="box">
+	<div [formGroup]="boardForm">
+		<p class="title">Verify Phone Number</p>
+		<div class="otp-wrapper" formGroupName="otpForm">
+			<ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:5}"></ng-otp-input>
+		</div>
+	</div>
+</div>
+<div class="action-section">
+	<div></div>
+	<ion-button
+			slot="end"
+			size="default"
+			expand="block"
+			class="btn"
+			(click)="onClick()"
+			color="primary">
+		Next
+	</ion-button>
+</div>
