@@ -157,24 +157,3 @@ ion-label .step-label {
 	}
 }
 
-.action-section {
-	margin-top: 50px;
-	display: flex;
-	justify-content: space-between;
-}
-
-@media(max-width: 800px) {
-	.action-section {
-		display: block;
-
-	}
-}
-
-
-.btn {
-	--padding-top: 22px;
-	--padding-start: 40px;
-	--padding-end: 40px;
-	--padding-bottom: 22px;
-	text-transform: capitalize;
-}
