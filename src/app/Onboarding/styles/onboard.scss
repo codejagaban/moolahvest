@@ -1,6 +1,14 @@
-app-stepper {
-height: 100%;
+wrapper {
+  height: 100%;
 }
-.action-button {
-padding: 300px;
+
+
+ion-icon {
+  font-size: 23px;
+  &.invalid {
+    color: var(--ion-color-danger);
+  }
+  &.valid {
+    color: var(--ion-color-success)
+  }
 }
