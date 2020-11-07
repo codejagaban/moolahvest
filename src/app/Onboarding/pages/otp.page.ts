@@ -7,6 +7,7 @@ import { FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-onboard-otp',
+    styleUrls: [ '../styles/otp.scss'],
     templateUrl: '../views/otp.html'
 })
 export class OtpPage implements OnInit, OnDestroy {

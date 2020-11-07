@@ -8,6 +8,7 @@
 }
 body {
   background: var(--ion-color-medium);
+  font-family: var(--ion-font-primary);
   color: var(--ion-color-dark);
 }
 
@@ -120,5 +121,5 @@ p.title {
   background: var(--ion-color-light);
   box-shadow: var(--shadow-medium);
   border-radius: 8px;
-  margin: 10% 5px 5px 5px;
+  margin: 15% 5px 5px 5px;
 }

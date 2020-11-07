@@ -1,8 +1,15 @@
 <div class="box">
 	<div [formGroup]="boardForm">
-		<p class="title">Verify Phone Number</p>
+		<p class="title ion-text-center">Verify Phone Number</p>
+		<p class="desc">Enter the OTP code sent to +234579782989</p>
 		<div class="otp-wrapper" formGroupName="otpForm">
-			<ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:5}"></ng-otp-input>
+			<ng-otp-input
+					(onInputChange)="onOtpChange($event)"
+					[config]="{length:6, inputClass:'otp-input'}"
+			></ng-otp-input>
+		</div>
+		<div class="">
+		
 		</div>
 	</div>
 </div>
