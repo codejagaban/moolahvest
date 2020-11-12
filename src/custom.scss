@@ -55,12 +55,6 @@ app-onboard {
       font-size: 14px;
 
     }
-
-    // mat-label focused style
-    .mat-form-field.mat-focused .mat-form-field-label {
-      // color: $custom-main-color !important;
-    }
-
     // mat-label error style
     .mat-form-field.mat-form-field-invalid .mat-form-field-label {
       color: var(--ion-color-danger) !important;

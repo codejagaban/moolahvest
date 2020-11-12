@@ -2,7 +2,8 @@
 <ion-header
   class="ion-hide-md-up"
   *ngFor="let step of steps; let i = index"
-  (click)="onClick(i)">
+  (click)="onClick(i)"
+  [ngStyle]="{display: selectedIndex === i ? 'block': 'none'}">
   <ion-toolbar class="step-header">
     <ion-chip>
       <ion-label>
