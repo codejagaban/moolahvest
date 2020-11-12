@@ -10,6 +10,7 @@ import { TextInputPage } from './components/text-input.page';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import {MatSelectModule} from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { NgOtpInputModule } from 'ng-otp-input';
@@ -31,6 +32,7 @@ const routes: Routes = [
     NgOtpInputModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
@@ -46,6 +48,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
     CommonModule,

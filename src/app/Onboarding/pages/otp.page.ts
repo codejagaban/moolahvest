@@ -31,7 +31,7 @@ export class OtpPage implements OnInit, OnDestroy {
  }
 
     ngOnInit(): void {
-        throw new Error('Method not implemented.');
+        // throw new Error('Method not implemented.');
     }
     ngOnDestroy(): void {
         if (this.userSub){

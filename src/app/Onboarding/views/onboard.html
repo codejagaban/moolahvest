@@ -1,15 +1,17 @@
 
-<app-stepper [linerModeSelected]="false" #appStepper>
-	<cdk-step [label]="'Bio Data'">
-		<app-onboard-wallet [boardForm]="boardForm"></app-onboard-wallet>
-	</cdk-step>
-	<cdk-step [label]="'Verify Your Phone Number'">
-		<app-onboard-otp [boardForm]="boardForm"></app-onboard-otp>
-	</cdk-step>
-	<cdk-step [label]="'Create Password'">
-		<app-onboard-setpassword></app-onboard-setpassword>
-	</cdk-step>
-	<cdk-step [label]="'Create PIN'">
-		<app-onboard-setpin></app-onboard-setpin>
-	</cdk-step>
-</app-stepper>
+<ion-content>
+  <app-stepper [linerModeSelected]="false" #appStepper>
+    <cdk-step [label]="'Bio Data'">
+      <app-onboard-wallet [boardForm]="boardForm"></app-onboard-wallet>
+    </cdk-step>
+    <cdk-step [label]="'Verify Your Phone Number'">
+      <app-onboard-otp [boardForm]="boardForm"></app-onboard-otp>
+    </cdk-step>
+    <cdk-step [label]="'Create Password'">
+      <app-onboard-setpassword></app-onboard-setpassword>
+    </cdk-step>
+    <cdk-step [label]="'Create PIN'">
+      <app-onboard-setpin></app-onboard-setpin>
+    </cdk-step>
+  </app-stepper>
+</ion-content>

@@ -1,69 +1,66 @@
 
-<ion-header class="ion-hide-md-up"
-			*ngFor="let step of steps; let i = index"
-			(click)="onClick(i)" >
-	<ion-toolbar class="step-header">
-		<ion-chip>
-			<ion-label>
-				<span class="step-count">
-					<span
-[class.active]="selectedIndex === i">
-Step 0{{i+1}}</span> /0{{steps.length}}</span>
-				{{step.label}}
-			</ion-label>
-		</ion-chip>
-	</ion-toolbar>
-	<div class="step-progress">
-		<div class="progress"  style="--progress:{{i+1}}"></div>
-	</div>
+<ion-header
+  class="ion-hide-md-up"
+  *ngFor="let step of steps; let i = index"
+  (click)="onClick(i)">
+  <ion-toolbar class="step-header">
+    <ion-chip>
+      <ion-label>
+        <span class="step-count">
+            <span
+              [class.active]="selectedIndex === i">
+              Step 0{{i+1}}
+            </span> /0{{steps.length}}
+          </span>{{step.label}}
+      </ion-label>
+    </ion-chip>
+  </ion-toolbar>
+  <div class="step-progress">
+    <div class="progress"  style="--progress:{{i+1}}"></div>
+  </div>
 </ion-header>
 
 <ion-grid class="ion-no-padding">
-	<ion-row class="row  ">
-		<ion-col size="3" class="col ion-hide-md-down">
-			<div class="step-segment">
-				<div class="logo">
-					<img src="/assets/icon/logo.png" width="230" alt="">
-				</div>
-				<ion-chip
-						*ngFor="let step of steps; let i = index"
-						[class.active]="selectedIndex === i"
-						[class.done]=""
-						(click)="onClick(i)">
-					<ion-label >
-						<span class="step-bar">0{{i+1}}</span>
-						<div>
-							<p class="step-count">Step 0{{i + 1}}</p>
-							<span class="step-label">
-								{{step.label}}
-							</span>
-						</div>
-					</ion-label>
-				</ion-chip>
-				<div class="step-footer">
-					<div class="step-footer-item">
-						<a href="/faq">FAQ</a>
-						<a href="/faq">Terms and Conditions</a>
-						<a href="/faq">Privacy Policy</a>
-					</div>
-				</div>
-			</div>
-		</ion-col>
-		<ion-col size="12" class="col-content" size-md="9"  >
-			<div class="step-content">
-				<ion-grid class="ion-no-padding">
-					<ion-row class="ion-justify-content-center">
-						<ion-col size="12" size-md="6">
-					
-								<ng-container [ngTemplateOutlet] = "selected.content"></ng-container>
-						
-						</ion-col>
-					</ion-row>
-				</ion-grid>
-			
-			</div>
-			
-		</ion-col>
-	</ion-row>
+  <ion-row class="row  ">
+    <ion-col size="3" class="col ion-hide-md-down">
+      <div class="step-segment">
+        <div class="logo">
+          <img src="/assets/icon/logo.png" width="230" alt="">
+        </div>
+        <ion-chip
+          *ngFor="let step of steps; let i = index"
+          [class.active]="selectedIndex === i"
+          [class.done]=""
+          (click)="onClick(i)">
+          <ion-label >
+              <span class="step-bar">0{{i+1}}
+              </span>
+              <div>
+                <p class="step-count">Step 0{{i + 1}}</p>
+                  <span class="step-label">{{step.label}}</span>
+              </div>
+          </ion-label>
+        </ion-chip>
+        <div class="step-footer">
+                    <div class="step-footer-item">
+                        <a href="/faq">FAQ</a>
+                        <a href="/faq">Terms and Conditions</a>
+                        <a href="/faq">Privacy Policy</a>
+                    </div>
+                </div>
+      </div>
+    </ion-col>
+    <ion-col size="12" class="col-content" size-md="9"  >
+      <div class="step-content">
+        <ion-grid class="ion-no-padding">
+          <ion-row  class="ion-justify-content-center">
+            <ion-col size="12" size-md="6">
+              <ng-container [ngTemplateOutlet] = "selected.content"></ng-container>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-col>
+  </ion-row>
 </ion-grid>
 

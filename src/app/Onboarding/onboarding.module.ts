@@ -9,6 +9,7 @@ import { OtpPage } from './pages/otp.page';
 import { SetPasswordPage } from './pages/setPassword.page';
 import { SetPINPage } from './pages/setPIN.page';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -32,6 +33,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes), CommonModule, SharedModule],
-  declarations: [OnboardPage, WalletPage, OtpPage, SetPINPage]
+  declarations: [OnboardPage, WalletPage, OtpPage]
 })
 export class OnboardingModule {}

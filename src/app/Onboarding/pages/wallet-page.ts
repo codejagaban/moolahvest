@@ -2,16 +2,20 @@ import { FormGroup } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-onboard-wallet',
-	styleUrls: ['../styles/wallet.scss'],
-	templateUrl: '../views/wallet.html'
+  selector: 'app-onboard-wallet',
+  styleUrls: ['../styles/wallet.scss'],
+  templateUrl: '../views/wallet.html'
 })
 export class WalletPage implements OnInit{
-	@Input() boardForm: FormGroup;
-	constructor() {  }
-	ngOnInit() { }
-	onClick(){
-		console.log(this.boardForm);
-	}
+  constructor() {  }
+  @Input() boardForm: FormGroup;
+  // calculate the most possible 18 years from today
+  today = new Date()
+  maxDate = new Date(this.today.getFullYear()-18, this.today.getMonth(), this.today.getDate());
+  ngOnInit() {
+  }
+  onClick(){
+    console.log(this.boardForm);
+  }
 
 }
