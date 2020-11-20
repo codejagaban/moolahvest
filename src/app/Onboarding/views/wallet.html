@@ -2,11 +2,27 @@
   <div [formGroup]="boardForm">
     <p class="title">Personal Details</p>
     <div class="wallet-input" formGroupName="walletForm">
-      <app-text-input [label]="'First name'" [type]="'text'" formControlName="firstName"></app-text-input>
-      <app-text-input [label]="'Last name'" [type]="'text'" formControlName="lastName"></app-text-input>
-      <app-text-input [label]="'Email address'" [type]="'email'" formControlName="email"></app-text-input>
-      <mat-form-field appearance="outline" style="width:100%">
-        <mat-label for="phone">Enter Phone Number</mat-label>
+      <app-text-input
+        [label]="'First name'"
+        [type]="'text'"
+        formControlName="firstName">
+      </app-text-input>
+      <app-text-input
+        [label]="'Last name'"
+        [type]="'text'"
+        formControlName="lastName">
+      </app-text-input>
+      <app-text-input
+        [label]="'Email address'"
+        [type]="'email'"
+        formControlName="email">
+      </app-text-input>
+      <mat-form-field
+        appearance="outline"
+        style="width:100%">
+        <mat-label for="phone">
+          Enter Phone Number
+        </mat-label>
         <ngx-mat-intl-tel-input
           [cssClass]="'custom'"
           [preferredCountries]="['ng']"
@@ -17,26 +33,31 @@
           formControlName="phone"
           #phone>
         </ngx-mat-intl-tel-input>
-        <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
+        <mat-hint>
+          e.g. {{phone.selectedCountry.placeHolder}}
+        </mat-hint>
         <ion-icon
           matSuffix
           name="alert-circle-outline"
           class="invalid"
-          *ngIf="(boardForm.controls.walletForm.controls.phone.errors?.required &&
-          boardForm.controls.walletForm.controls.phone.touched)">
+          *ngIf="(boardForm.controls.walletForm.controls.phone.errors?.required
+          && boardForm.controls.walletForm.controls.phone.touched)">
         </ion-icon>
         <ion-icon
           matSuffix
           name="checkmark-outline"
-          *ngIf="(boardForm.controls.walletForm.controls.phone.errors === null &&
-          boardForm.controls.walletForm.controls.phone.touched)"
+          *ngIf="(boardForm.controls.walletForm.controls.phone.errors === null
+           && boardForm.controls.walletForm.controls.phone.touched)"
           class="valid">
         </ion-icon>
-        <mat-error *ngIf="boardForm.controls.walletForm.controls.phone?.errors?.required">
+        <mat-error
+          *ngIf="boardForm.controls.walletForm.controls.phone?.errors?.required">
           Phone number is invalid
         </mat-error>
       </mat-form-field>
-      <mat-form-field appearance="outline" style="width: 100%">
+      <mat-form-field
+        appearance="outline"
+        style="width: 100%">
         <mat-label>Gender</mat-label>
         <mat-select
           formControlName="gender"
@@ -49,17 +70,17 @@
           matSuffix
           name="alert-circle-outline"
           class="invalid"
-          *ngIf="(boardForm.controls.walletForm.controls.gender.errors?.required &&
-          boardForm.controls.walletForm.controls.gender.touched)">
+          *ngIf="(boardForm.controls.walletForm.controls.gender.errors?.required && boardForm.controls.walletForm.controls.gender.touched)">
         </ion-icon>
         <ion-icon
           matSuffix
           name="checkmark-outline"
-          *ngIf="(boardForm.controls.walletForm.controls.gender.errors === null &&
-          boardForm.controls.walletForm.controls.gender.touched)"
+          *ngIf="(boardForm.controls.walletForm.controls.gender.errors === null
+          && boardForm.controls.walletForm.controls.gender.touched)"
           class="valid">
         </ion-icon>
-        <mat-error *ngIf="boardForm.controls.walletForm.controls.gender.errors?.required">
+        <mat-error
+          *ngIf="boardForm.controls.walletForm.controls.gender.errors?.required">
           Gender is required
         </mat-error>
       </mat-form-field>
@@ -75,7 +96,8 @@
           required>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker touchUi #picker></mat-datepicker>
-        <mat-error *ngIf="boardForm.controls.walletForm.controls.dateOfBirth.errors?.required">
+        <mat-error
+          *ngIf="boardForm.controls.walletForm.controls.dateOfBirth.errors?.required">
           Date of birth is invalid
         </mat-error>
       </mat-form-field>
@@ -84,13 +106,10 @@
 </div>
 <div class="action-section">
   <div></div>
-  <ion-button
-    slot="end"
-    size="default"
-    expand="block"
-    class="btn"
-    (click)="onClick()"
-    color="primary">
-    Next
-  </ion-button>
+  <button
+  [disabled]="(boardForm.get('walletForm')).invalid"
+  class="btn btn-block btn-primary"
+  cdkStepperNext>
+    Next Click
+  </button>
 </div>

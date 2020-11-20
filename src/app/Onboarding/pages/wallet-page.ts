@@ -14,6 +14,9 @@ export class WalletPage implements OnInit{
   maxDate = new Date(this.today.getFullYear()-18, this.today.getMonth(), this.today.getDate());
   ngOnInit() {
   }
+  get wForm() {
+    return this.boardForm.controls.walletForm
+  }
   onClick(){
     console.log(this.boardForm);
   }

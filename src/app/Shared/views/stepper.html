@@ -1,6 +1,6 @@
 
 <ion-header
-  class="ion-hide-md-up"
+  class="ion-hide-lg-up"
   *ngFor="let step of steps; let i = index"
   (click)="onClick(i)"
   [ngStyle]="{display: selectedIndex === i ? 'block': 'none'}">
@@ -12,8 +12,9 @@
               [class.active]="selectedIndex === i">
               Step 0{{i+1}}
             </span> /0{{steps.length}}
-          </span>{{step.label}}
+          </span>
       </ion-label>
+      {{step.label}}
     </ion-chip>
   </ion-toolbar>
   <div class="step-progress">
@@ -23,7 +24,7 @@
 
 <ion-grid class="ion-no-padding">
   <ion-row class="row  ">
-    <ion-col size="3" class="col ion-hide-md-down">
+    <ion-col size="3" class="col ion-hide-lg-down">
       <div class="step-segment">
         <div class="logo">
           <img src="/assets/icon/logo.png" width="230" alt="">
@@ -55,7 +56,7 @@
       <div class="step-content">
         <ion-grid class="ion-no-padding">
           <ion-row  class="ion-justify-content-center">
-            <ion-col size="12" size-md="6">
+            <ion-col size="12" size-md="9" size-lg="6">
               <ng-container [ngTemplateOutlet] = "selected.content"></ng-container>
             </ion-col>
           </ion-row>

@@ -1,7 +1,31 @@
-<ion-card>
-	<ion-card-header>
-	  <ion-card-subtitle>Set Pin Page</ion-card-subtitle>
-	</ion-card-header>
-  
-
-  </ion-card>
+<div class="box ion-text-center">
+  <div
+    class="pin-input"
+    [formGroup]="boardForm">
+    <p class="title ">Create PIN</p>
+    <p class="desc">Create a new pin to use for transaction</p>
+    <div
+      class="otp-wrapper"
+      formGroupName="otpForm">
+      <ng-otp-input
+        (onInputChange)="onOtpChange($event)"
+         [config]="{
+           length:4,
+           inputClass: 'custom-input'
+                }">
+      </ng-otp-input>
+    </div>
+  </div>
+</div>
+<div class="action-section">
+  <div></div>
+  <button
+  class="btn btn-primary"
+  slot="end"
+  size="default"
+  expand="block"
+  class="btn btn-primary"
+  cdkStepperNext>
+    Next
+</button>
+</div>

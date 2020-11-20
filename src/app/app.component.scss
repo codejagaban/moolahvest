@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Harmattan&display=swap');
 @font-face {
-	font-family: "clean-ui";
-	src: url(../assets/fonts/gordita.woff) format('woff');
-	font-weight: normal;
+  font-family: "clean-ui";
+  src: url(../assets/fonts/gordita.woff) format('woff');
+  font-weight: normal;
 }
 body {
-	background: var(--ion-color-medium);
-	color: var(--ion-color-medium);
+  background: var(--ion-color-medium);
+  color: var(--ion-color-medium);
 }
 
+ion-app {
+}
 // Global modification styles to use for different components
 
 :host {
@@ -26,14 +28,14 @@ color: var(--ion-color-primary-shade) !important;
 
 // mat-input error outline color
 .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
-	color: var(--ion-color-danger) !important;
+  color: var(--ion-color-danger) !important;
 
 opacity: 0.8 !important;
 }
 
-	input.mat-input-element {
-	margin-top: -0.0625em;
-	font-family: var(--ion-font-primary);
+  input.mat-input-element {
+  margin-top: -0.0625em;
+  font-family: var(--ion-font-primary);
 }
 
 // mat-input error caret color
@@ -43,9 +45,9 @@ caret-color: var(--ion-color-danger) !important;
 
 // mat-label normal state style
 .mat-form-field-label {
-	padding-left: 10px;
-	font-family: var(--ion-font-primary);
-	font-size: 14px;
+  padding-left: 10px;
+  font-family: var(--ion-font-primary);
+  font-size: 14px;
 
 }
 
@@ -56,45 +58,45 @@ caret-color: var(--ion-color-danger) !important;
 
 // mat-label error style
 .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-	color: var(--ion-color-danger) !important;
+  color: var(--ion-color-danger) !important;
 }
-	.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start, .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end, .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap {
-		border-width: 1px  !important;
-	}
-	.mat-form-field-wrapper{
-		margin: 0 !important;
-		padding: 20px 0 15px 0;
-		}
-	.mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
-		padding: 0;
-	}
-		mat-error {
-			color: var(--ion-color-danger);
-			font-size:13px ;
-			padding-left: 20px;
-			font-family: var(--ion-font-primary);
-			}
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start, .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end, .mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap {
+    border-width: 1px  !important;
+  }
+  .mat-form-field-wrapper{
+    margin: 0 !important;
+    padding: 20px 0 15px 0;
+    }
+  .mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+    padding: 0;
+  }
+    mat-error {
+      color: var(--ion-color-danger);
+      font-size:13px ;
+      padding-left: 20px;
+      font-family: var(--ion-font-primary);
+      }
 }
 }
 .action-section {
-	margin-top: 50px;
-	display: flex;
-	justify-content: space-between;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media(max-width: 800px) {
-	.action-section {
-		display: block;
+  .action-section {
+    display: block;
 
-	}
+  }
 }
 
 
 .btn {
-	--padding-top: 22px;
-	--padding-start: 40px;
-	--padding-end: 40px;
-	--padding-bottom: 22px;
-	text-transform: capitalize;
+  --padding-top: 22px;
+  --padding-start: 40px;
+  --padding-end: 40px;
+  --padding-bottom: 22px;
+  text-transform: capitalize;
 }
 

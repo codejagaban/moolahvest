@@ -3,7 +3,8 @@
     appearance="outline"
     style="width: 100%;"
     [ngClass]= "(controlDir && controlDir.control &&
-    controlDir.control.touched)? !controlDir.control.valid ? 'mat-form-field-invalid' :
+    controlDir.control.touched)? !controlDir.control.valid ?
+    'mat-form-field-invalid' :
     'mat-form-field-valid' : null">
     <mat-label class="label">{{label}}</mat-label>
     <input
@@ -19,19 +20,26 @@
       matSuffix
       name="alert-circle-outline"
       class="invalid"
-      *ngIf="(controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.touched)">
+      *ngIf="(controlDir && controlDir.control && !controlDir.control.valid &&
+      controlDir.control.touched)">
     </ion-icon>
     <ion-icon
       matSuffix
       name="checkmark-outline"
       class="valid"
-      *ngIf="(controlDir && controlDir.control && controlDir.control.valid && controlDir.control.touched)">
+      *ngIf="(controlDir && controlDir.control && controlDir.control.valid &&
+      controlDir.control.touched)">
     </ion-icon>
   </mat-form-field>
   <div
     class="invalid-feedback"
-    *ngIf="(controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.touched)">
-    <mat-error *ngIf="controlDir.control.errors?.required">{{label}} is required</mat-error>
-    <mat-error *ngIf="controlDir.control.errors?.pattern">Invalid Email Address</mat-error>
+    *ngIf="(controlDir && controlDir.control && !controlDir.control.valid &&
+    controlDir.control.touched)">
+    <mat-error *ngIf="controlDir.control.errors?.required">
+      {{label}} is required
+    </mat-error>
+    <mat-error *ngIf="controlDir.control.errors?.pattern">
+      Invalid Email Address
+    </mat-error>
   </div>
 </div>

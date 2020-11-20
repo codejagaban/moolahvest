@@ -26,6 +26,9 @@ export class OnboardPage implements OnInit {
       }),
       otpForm: this.fb.group({
         otp: ['', Validators.required]
+      }),
+      passwordForm: this.fb.group({
+        password: [undefined, [Validators.required]]
       })
     });
   }
