@@ -9,8 +9,14 @@
                   length:6,
                   inputClass: 'custom-input'
                 }"
+                required
       ></ng-otp-input>
     </div>
+    <mat-error
+    *ngIf="boardForm.controls.otpForm.controls.otp.errors?.required &&
+    boardForm.controls.otpForm.controls.otp.touched">
+    Enter a valid OTP 
+  </mat-error>
     <div class="">
       <p>Didn't receive code? <a href="#"> Resend OTP</a></p>
     </div>
