@@ -85,12 +85,18 @@ ion-label .step-label {
   background:var(--ion-color-primary-shade);
 }
 .progress {
-  width: calc(var(--progress) / 4 * 100%);;
+  width: calc(var(--progress) / 4 * 100%);
   height: inherit;
   border-top-right-radius: 30px;
+  animation: ease-in 2s;
   border-bottom-right-radius: 30px;
   background:var(--ion-color-warning);
+  animation: expandWidth .6s;
   -webkit-text-fill-color: transparent;
+}
+@keyframes expandWidth {
+  0% { width: calc(var(--progress) / 4 * 75%) }
+  100% { width: calc(var(--progress) / 4 * 100%); }
 }
 
 .step-segment {
