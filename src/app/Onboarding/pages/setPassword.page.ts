@@ -1,6 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { slideInRight } from 'src/app/animations';
 import { Genders, OnboardingUser } from '../models/user.model';
 import { OnboardingService } from '../onboaring.services';
 
@@ -8,6 +9,7 @@ import { OnboardingService } from '../onboaring.services';
 @Component({
     selector: 'app-onboard-setpassword',
     styleUrls: ['../styles/password.scss'],
+    animations: [slideInRight],
     templateUrl : '../views/setPassword.html'
 })
 export class SetPasswordPage implements OnInit, OnDestroy {

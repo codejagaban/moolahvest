@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
+import { slideInRight } from 'src/app/animations';
 import { Genders, OnboardingUser } from '../models/user.model';
 import { OnboardingService } from '../onboaring.services';
 
@@ -10,6 +11,7 @@ import { OnboardingService } from '../onboaring.services';
 @Component({
     selector: 'app-onboard-setpin',
     styleUrls: ['../styles/pin.scss'],
+    animations: [slideInRight],
     templateUrl: '../views/setPIN.html'
 })
 export class SetPINPage{

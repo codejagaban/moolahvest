@@ -1,3 +1,4 @@
+import { slideInRight } from './../../animations';
 import { CdkStepper } from '@angular/cdk/stepper';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -5,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-stepper',
   styleUrls: ['../styles/stepper.scss'],
+  animations: [slideInRight],
   templateUrl: '../views/stepper.html',
   providers: [{provide: CdkStepper, useExisting: StepperPage}]
 })

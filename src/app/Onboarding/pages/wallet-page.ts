@@ -1,9 +1,11 @@
+import { slideInRight } from './../../animations';
 import { FormGroup } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-onboard-wallet',
   styleUrls: ['../styles/wallet.scss'],
+  animations: [ slideInRight ],
   templateUrl: '../views/wallet.html'
 })
 export class WalletPage implements OnInit{

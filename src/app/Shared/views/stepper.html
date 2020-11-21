@@ -32,7 +32,7 @@
         <ion-chip
           *ngFor="let step of steps; let i = index"
           [class.active]="selectedIndex === i"
-          [class.done]=""
+          [class.done]="step.completed"
           (click)="onClick(i)">
           <ion-label >
               <span class="step-bar">0{{i+1}}
@@ -57,7 +57,7 @@
         <ion-grid class="ion-no-padding">
           <ion-row  class="ion-justify-content-center">
             <ion-col size="12" size-md="9" size-lg="6">
-              <ng-container [ngTemplateOutlet] = "selected.content"></ng-container>
+              <ng-container @slideInRight [ngTemplateOutlet] = "selected.content"></ng-container>
             </ion-col>
           </ion-row>
         </ion-grid>

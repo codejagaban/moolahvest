@@ -63,13 +63,13 @@ ion-label .step-label {
   opacity: 0.7;
 }
 //active classes
-.active {
+.active, .done {
   color: var(--ion-color-warning-tint)
 }
-.active ion-label .step-label{
+.active ion-label .step-label, .done ion-label .step-label{
   opacity: 1;
 }
-.active .step-bar {
+.active .step-bar, .done .step-bar {
   border: 2px solid var(--ion-color-warning);
   opacity: 1;
 }

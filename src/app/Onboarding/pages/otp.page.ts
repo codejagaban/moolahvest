@@ -1,3 +1,4 @@
+import { slideInRight } from './../../animations';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Genders, OnboardingUser } from '../models/user.model';
@@ -7,7 +8,8 @@ import { FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-onboard-otp',
-    styleUrls: [ '../styles/otp.scss'],
+    styleUrls: ['../styles/otp.scss'],
+    animations: [slideInRight],
     templateUrl: '../views/otp.html'
 })
 export class OtpPage implements OnInit, OnDestroy {

@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box" @slideInRight>
   <div [formGroup]="boardForm">
     <p class="title">Personal Details</p>
     <div class="wallet-input" formGroupName="walletForm">
@@ -106,10 +106,10 @@
 </div>
 <div class="action-section">
   <div></div>
+  <!-- [disabled]="(boardForm.get('walletForm')).invalid" -->
   <button
-  [disabled]="(boardForm.get('walletForm')).invalid"
   class="btn btn-block btn-primary"
   cdkStepperNext>
-    Next Click
+    Next
   </button>
 </div>

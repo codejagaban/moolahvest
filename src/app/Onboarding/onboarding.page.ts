@@ -32,5 +32,10 @@ export class OnboardPage implements OnInit {
       })
     });
   }
-
+  checkPasswords(group: FormGroup) {
+    // here we have the 'passwords' group
+  let pass = this.boardForm.get('walletForm')
+  let confirmPass = group.get('confirmPass').value;
+  return pass === confirmPass ? null : { notSame: true }
+}
 }
